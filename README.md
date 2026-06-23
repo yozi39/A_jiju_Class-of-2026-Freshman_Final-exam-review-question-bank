@@ -19,7 +19,6 @@ first_math_question/
 ├─ main.py
 ├─ ai_utils.py
 ├─ question_bank.json
-├─ questions/              # 原始试卷图片
 ├─ requirements.txt
 ├─ README.md
 └─ .gitignore
@@ -29,7 +28,6 @@ first_math_question/
 
 ```powershell
 cd D:\project\first_math_question
-.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python -m streamlit run main.py
 ```
