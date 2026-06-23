@@ -3,9 +3,6 @@
 一个使用 Streamlit、JSON 题库和 DeepSeek API 的期末复习小工具。无需 API Key
 即可浏览、筛选、随机抽题、查看答案，以及生成可复制的 AI 解析 Prompt。
 
-当前题库已从 `questions/` 中的 20 个独立图片页整理出 110 道题；同一照片的
-`.jpeg` / `.JPG` 重复副本按一页处理。
-
 ## 功能
 
 - 按课程、章节和题型联动筛选
@@ -42,7 +39,7 @@ python -m streamlit run main.py
 ## DeepSeek 设置
 
 页面侧边栏提供 API Key 密码输入框。Key 只作为当前页面调用参数传给
-`ChatOpenAI`，程序不会打印或写入文件。只有点击“使用 DeepSeek 生成解析”时
+`DeepSeekAI`，程序不会打印或写入文件。只有点击“使用 DeepSeek 生成解析”时
 才会发出 API 请求。
 
 当前配置：
@@ -73,10 +70,3 @@ python -m streamlit run main.py
   "source_image": "questions/IMG_5823.jpeg"
 }
 ```
-
-## 安全与部署
-
-- 不要提交 `.venv`、`.env`、`__pycache__` 或 `.streamlit/secrets.toml`。
-- 不要把真实 API Key 写进代码、README、截图或 Git 历史。
-- 公共部署时让每位使用者在密码框中输入自己的 Key。
-- 题库图片可能包含手写内容，发布前请检查是否含姓名、学号等个人信息。
